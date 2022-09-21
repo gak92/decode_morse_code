@@ -10,3 +10,10 @@ end
 
 # print 'Character is: '
 # print decode_character('-..-')
+def decode_word(string)
+  word = ""
+  myArray = string.split.each { |code|  word += decode_character(code)}
+  return word
+  end
+
+print decode_word("-- -.--")
