@@ -25,3 +25,4 @@ def decode(sentence)
 end
 
 print decode("-- -.--   -. .- -- .")
+print decode("      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
