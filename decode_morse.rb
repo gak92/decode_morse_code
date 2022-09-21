@@ -16,4 +16,12 @@ def decode_word(string)
   return word
   end
 
-print decode_word("-- -.--")
+# print decode_word("-- -.--")
+
+def decode(sentence)
+  string = ""
+  myArray = sentence.split('  ').each { |code| string += " #{ decode_word(code)}"}
+  return string
+end
+
+print decode("-- -.--   -. .- -- .")
