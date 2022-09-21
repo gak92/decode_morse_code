@@ -11,18 +11,18 @@ end
 # print 'Character is: '
 # print decode_character('-..-')
 def decode_word(string)
-  word = ""
-  myArray = string.split.each { |code|  word += decode_character(code)}
-  return word
-  end
+  word = ''
+  string.split.each { |code| word += decode_character(code) }
+  word
+end
 
 # print decode_word("-- -.--")
 
 def decode(sentence)
-  string = ""
-  myArray = sentence.split('  ').each { |code| string += " #{ decode_word(code)}"}
-  return string
+  string = ''
+  sentence.split('  ').each { |code| string += " #{decode_word(code)}" }
+  string
 end
 
-print decode("-- -.--   -. .- -- .")
-print decode("      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
+print decode('-- -.--   -. .- -- .')
+print decode('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
